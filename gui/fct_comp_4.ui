@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fct_comp_4</class>
+ <widget class="QDialog" name="fct_comp_4">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sportifs d'un pays et un équipe</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Travail à réaliser : améliorez l'interface de sorte que le pays ne puisse être choisi que parmi ceux présents dans la base. Le comboBox équipe  ne doit proposer que des valeurs possibles pour le pays actuellement choisi.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Pays</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_fct_4_pays"/>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Equipe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox_fct_4_equipe"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_fct_4">
+       <property name="text">
+        <string>Valider</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_fct_comp_4">
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>70</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>numSp</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>nomSp</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>prenomSp</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>categorieSp</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>dateNaisSp</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_fct_comp_4">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_fct_4</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_comp_4</receiver>
+   <slot>refreshResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>468</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>refreshResult()</slot>
+ </slots>
+</ui>
