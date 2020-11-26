@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>968</width>
-    <height>600</height>
+    <width>972</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,11 +25,11 @@
   <property name="windowTitle">
    <string>BD JO</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>4</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabEpreuves">
       <attribute name="title">
@@ -66,7 +66,7 @@
           <bool>true</bool>
          </property>
          <property name="columnCount">
-          <number>6</number>
+          <number>7</number>
          </property>
          <attribute name="horizontalHeaderCascadingSectionResizes">
           <bool>true</bool>
@@ -75,7 +75,7 @@
           <number>50</number>
          </attribute>
          <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>150</number>
+          <number>130</number>
          </attribute>
          <attribute name="horizontalHeaderHighlightSections">
           <bool>true</bool>
@@ -89,6 +89,11 @@
          <attribute name="verticalHeaderVisible">
           <bool>false</bool>
          </attribute>
+         <column>
+          <property name="text">
+           <string>nomDi</string>
+          </property>
+         </column>
          <column>
           <property name="text">
            <string>numEp</string>
@@ -490,7 +495,7 @@
          </column>
          <column>
           <property name="text">
-           <string>dateNaisSp</string>
+           <string>Age</string>
           </property>
          </column>
         </widget>
@@ -544,9 +549,35 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tab_disciplines">
+      <attribute name="title">
+       <string>LesDisciplines</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableWidget" name="tableDisciplines">
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>900</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>nomDi</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_disciplines">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
-   <item>
+   <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <spacer name="horizontalSpacer">

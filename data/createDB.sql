@@ -23,6 +23,7 @@ CREATE TABLE LesEquipiers
 
 CREATE TABLE LesEpreuves
 (
+  nomDi VARCHAR2(20),
   numEp NUMBER(3),
   nomEp VARCHAR2(20),
   formeEp VARCHAR2(13),
@@ -30,6 +31,7 @@ CREATE TABLE LesEpreuves
   nbSportifsEp NUMBER(2),
   dateEp DATE,
   CONSTRAINT EP_PK PRIMARY KEY (numEp),
+  CONSTRAINT EP_FK FOREIGN KEY(nomDi) REFERENCES LesDisciplines(nomDi),
   CONSTRAINT EP_CK1 CHECK (formeEp IN ('individuelle','par equipe','par couple')),
   CONSTRAINT EP_CK2 CHECK (categorieEp IN ('feminin','masculin','mixte')),
   CONSTRAINT EP_CK3 CHECK (numEp > 0),
@@ -57,6 +59,17 @@ CREATE TABLE LesResultats
   CONSTRAINT RES_FK3 FOREIGN KEY (bronze, numEp) REFERENCES LesInscriptions(numIn,numEp),
   CONSTRAINT RES_CK1 CHECK (gold<>silver AND silver<>bronze AND gold<>bronze)
 );
--- TODO 1.2a : ajouter la définition de la vue LesSportifs
+
+CREATE TABLE LesDisciplines
+(
+    nomDi VARCHAR2(20)
+);
+
+CREATE VIEW LesSportifs
+AS
+SELECT numSp, nomSp, prenomSp, pays, categorieSp, ((strftime('%Y', 'now')*12 + strftime('%m', 'now')) - (strftime('%Y', dateNaisSp)*12 + strftime('%m', dateNaisSp)))/12 age
+FROM LesSportifs_base
+
+
 -- TODO 1.3a : ajouter la création de la table LesDisciplines et ajouter l'attribut discipline dans la table LesEpreuves
 -- TODO 1.4a : ajouter la définition de la vue LesEquipes
