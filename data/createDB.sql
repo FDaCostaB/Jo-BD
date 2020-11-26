@@ -68,8 +68,13 @@ CREATE TABLE LesDisciplines
 CREATE VIEW LesSportifs
 AS
 SELECT numSp, nomSp, prenomSp, pays, categorieSp, ((strftime('%Y', 'now')*12 + strftime('%m', 'now')) - (strftime('%Y', dateNaisSp)*12 + strftime('%m', dateNaisSp)))/12 age
-FROM LesSportifs_base
+FROM LesSportifs_base;
 
+CREATE VIEW LesEquipes
+AS
+SELECT numEq, count(numEq) AS nbEquipiersEq
+FROM LesEquipiers
+GROUP BY numEq;
 
 -- TODO 1.3a : ajouter la création de la table LesDisciplines et ajouter l'attribut discipline dans la table LesEpreuves
 -- TODO 1.4a : ajouter la définition de la vue LesEquipes

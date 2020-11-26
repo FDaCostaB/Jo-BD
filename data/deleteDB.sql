@@ -5,3 +5,4 @@ DROP TABLE IF EXISTS LesDisciplines;
 DROP TABLE IF EXISTS LesEquipiers;
 DROP TABLE IF EXISTS LesSportifs_base;
 DROP VIEW IF EXISTS LesSportifs;
+DROP VIEW IF EXISTS LesEquipes;
