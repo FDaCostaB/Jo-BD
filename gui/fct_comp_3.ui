@@ -13,13 +13,17 @@
   <property name="windowTitle">
    <string>Liste des épreuves d'une catégorie (version 2, catégories extraites de la BD)</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+  </property>
   <widget class="QTableWidget" name="table_fct_comp_3">
    <property name="geometry">
     <rect>
      <x>13</x>
-     <y>85</y>
+     <y>65</y>
      <width>771</width>
-     <height>281</height>
+     <height>301</height>
     </rect>
    </property>
    <attribute name="horizontalHeaderMinimumSectionSize">
@@ -78,23 +82,10 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>491</width>
-     <height>34</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Initialiser la liste des catégories</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>520</x>
+     <x>10</x>
      <y>30</y>
      <width>172</width>
      <height>19</height>
@@ -107,45 +98,16 @@
   <widget class="QComboBox" name="cb_fct_comp_3">
    <property name="geometry">
     <rect>
-     <x>660</x>
+     <x>150</x>
      <y>30</y>
-     <width>131</width>
+     <width>181</width>
      <height>20</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>691</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>En choisissant la catégorie dans la liste, les tables sont mises à jour automatiquement sans cliquer sur un bouton!</string>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>fct_comp_3</receiver>
-   <slot>initaliser()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>364</x>
-     <y>52</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>444</x>
-     <y>81</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>cb_fct_comp_3</sender>
    <signal>currentTextChanged(QString)</signal>

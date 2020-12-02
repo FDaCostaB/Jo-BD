@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Liste des épreuves d'une catégorie (version 1, catégories fixées par l'interface)</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+  </property>
   <widget class="QTableWidget" name="table_fct_comp_2">
    <property name="geometry">
     <rect>
