@@ -1,4 +1,3 @@
--- TODO 1.3b : insérer ces données dans la table LesDisciplines (à ajouter au fichier insertDB.sql)
 
 INSERT INTO LesDisciplines (nomDi) VALUES ('Bobsleigh');
 INSERT INTO LesDisciplines (nomDi) VALUES ('Combine nordique');

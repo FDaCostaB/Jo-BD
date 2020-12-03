@@ -1,6 +1,3 @@
--- TODO 1.3c : supprimer les données de la table LesEpreuves
--- TODO 1.3d : insérer ces données à la place (à remplacer dans le fichier insertDB.sql)
-
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (1, 'Danse', 'par couple', 'Patinage artistique', 'mixte', 2, '2020-03-15 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (2, 'Couple', 'par couple', 'Patinage artistique', 'mixte', 2, '2020-03-15 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (3, 'Patinage', 'individuelle', 'Patinage artistique', 'feminin', NULL, '2020-03-17 10:49:28');

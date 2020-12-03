@@ -45,6 +45,3 @@ class AppTablesData(QDialog):
         self.refreshTable(self.ui.label_sportifs, self.ui.tableSportifs, "SELECT numSp, nomSp, prenomSp, pays, categorieSp,age FROM LesSportifs")
         self.refreshTable(self.ui.label_disciplines, self.ui.tableDisciplines,"SELECT nomDi FROM LesDisciplines")
         self.refreshTable(self.ui.label_disciplines, self.ui.tableEquipes, "SELECT numEq,nbEquipiersEq FROM LesEquipes")
-        # TODO 1.2b : ajouter l'affichage des éléments de la vue LesSportifs après l'avoir créée
-        # TODO 1.3d : afficher le contenu de la table LesDisciplines et ajouter l'attribut discipline dans l'affichage de la table LesEpreuves
-        # TODO 1.4b : ajouter l'affichage des éléments de la vue LesEquipes après l'avoir créée

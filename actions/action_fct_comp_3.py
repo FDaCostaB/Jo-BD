@@ -27,8 +27,6 @@ class AppFctComp3(QDialog):
         self.cb_fct_comp_3.addItems(categories)
 
     def refreshResult(self):
-        # TODO 1.6 : fonction à modifier pour remplacer la zone de saisie par une liste de valeurs issues de la BD une
-        #  fois le fichier ui correspondant mis à jour
 
         display.refreshLabel(self.ui.label_fct_comp_3, "")
 

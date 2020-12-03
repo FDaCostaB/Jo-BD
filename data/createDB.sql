@@ -76,5 +76,3 @@ SELECT numEq, count(numEq) AS nbEquipiersEq
 FROM LesEquipiers
 GROUP BY numEq;
 
--- TODO 1.3a : ajouter la création de la table LesDisciplines et ajouter l'attribut discipline dans la table LesEpreuves
--- TODO 1.4a : ajouter la définition de la vue LesEquipes

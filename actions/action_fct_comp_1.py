@@ -26,7 +26,6 @@ class AppFctComp1(QDialog):
         else:
             try:
                 cursor = self.data.cursor()
-                # TODO 1.1 : mettre à jour la requête pour ajouter dateNaisSp et changer aussi le fichier ui correspondant
                 result = cursor.execute("SELECT nomSp, prenomSp, pays, categorieSp, date(dateNaisSp) FROM LesSportifs_base JOIN LesEquipiers USING (numSp) WHERE numEq = ?", [self.ui.lineEdit.text().strip()])
             except Exception as e:
                 self.ui.table_fct_comp_1.setRowCount(0)

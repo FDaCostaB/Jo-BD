@@ -17,7 +17,6 @@ class AppFctComp2(QDialog):
     # Fonction de mise à jour de l'affichage
     @pyqtSlot()
     def refreshResult(self):
-        # TODO 1.5 : fonction à modifier pour remplacer la zone de saisie par une liste de valeurs prédéfinies dans l'interface une fois le fichier ui correspondant mis à jour
         display.refreshLabel(self.ui.label_fct_comp_2, "")
         if not self.ui.cb_fct_comp_2.currentText():
             self.ui.table_fct_comp_2.setRowCount(0)

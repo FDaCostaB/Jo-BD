@@ -18,7 +18,6 @@ class AppFctComp4(QDialog):
         cursor = self.data.cursor()
         cursor.execute("SELECT DISTINCT pays FROM LesSportifs JOIN LesEquipiers USING (numSp)")
         pays = [i[0] for i in cursor.fetchall()]
-        print(pays)
         self.comboBox_fct_4_pays.clear()
         self.comboBox_fct_4_pays.addItems(pays)
     # Constructeur
@@ -32,12 +31,11 @@ class AppFctComp4(QDialog):
 
     # Fonction de mise à jour de l'affichage
     def refreshResult(self):
-        # TODO 1.7 : fonction à modifier pour que l'équipe ne propose que des valeurs possibles pour le pays choisi
         display.refreshLabel(self.ui.label_fct_comp_4, "")
         try:
             cursor = self.data.cursor()
             result = cursor.execute(
-                "SELECT numSp, nomSp, prenomSp, categorieSp, dateNaisSp FROM LesSportifs_base JOIN LesEquipiers USING (numSp) WHERE pays = ? AND numEq=?",
+                "SELECT numSp, nomSp, prenomSp, categorieSp, date(dateNaisSp) FROM LesSportifs_base JOIN LesEquipiers USING (numSp) WHERE pays = ? AND numEq=?",
                 [self.ui.comboBox_fct_4_pays.currentText(),self.ui.comboBox_fct_4_equipe.currentText()]
             )
         except Exception as e:
