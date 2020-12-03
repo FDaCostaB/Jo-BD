@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+    <normaloff>342px-Olympic_rings_without_rims.svg.png</normaloff>342px-Olympic_rings_without_rims.svg.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="Line" name="line">
@@ -884,7 +884,7 @@
      <x>0</x>
      <y>0</y>
      <width>710</width>
-     <height>26</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFiles">
