@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>fct_comp_4</class>
- <widget class="QDialog" name="fct_comp_4">
+ <class>fct_part2_1</class>
+ <widget class="QDialog" name="fct_part2_1">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -36,12 +36,12 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableWidget" name="table_fct_comp_4">
+    <widget class="QTableWidget" name="table_fct_part2_1">
      <attribute name="horizontalHeaderMinimumSectionSize">
       <number>50</number>
      </attribute>
      <attribute name="horizontalHeaderDefaultSectionSize">
-      <number>70</number>
+      <number>300</number>
      </attribute>
      <attribute name="horizontalHeaderStretchLastSection">
       <bool>true</bool>
@@ -51,13 +51,18 @@
      </attribute>
      <column>
       <property name="text">
+       <string>Equipe</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
        <string>Age moyen</string>
       </property>
      </column>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_fct_comp_4">
+    <widget class="QLabel" name="label_fct_part2_1">
      <property name="text">
       <string/>
      </property>
@@ -69,10 +74,25 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_part2_1</receiver>
+   <slot>refreshResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>refreshResult()</slot>
-  <slot>initialiserpays()</slot>
-  <slot>initialiserid()</slot>
  </slots>
 </ui>

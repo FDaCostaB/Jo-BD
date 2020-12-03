@@ -884,7 +884,7 @@
      <x>0</x>
      <y>0</y>
      <width>710</width>
-     <height>31</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFiles">
@@ -975,8 +975,8 @@
    <slot>openData()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>488</x>
-     <y>145</y>
+     <x>463</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
      <x>498</x>
@@ -991,8 +991,8 @@
    <slot>open_fct_fournie_1()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>524</x>
-     <y>245</y>
+     <x>518</x>
+     <y>237</y>
     </hint>
     <hint type="destinationlabel">
      <x>79</x>
@@ -1007,8 +1007,8 @@
    <slot>open_fct_fournie_2()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>557</x>
-     <y>285</y>
+     <x>518</x>
+     <y>277</y>
     </hint>
     <hint type="destinationlabel">
      <x>116</x>
@@ -1023,8 +1023,8 @@
    <slot>open_fct_comp_1()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>556</x>
-     <y>369</y>
+     <x>544</x>
+     <y>361</y>
     </hint>
     <hint type="destinationlabel">
      <x>515</x>
@@ -1071,8 +1071,8 @@
    <slot>open_fct_comp_4()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>516</x>
-     <y>602</y>
+     <x>484</x>
+     <y>627</y>
     </hint>
     <hint type="destinationlabel">
      <x>521</x>
@@ -1096,6 +1096,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_fct_part2_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>698</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>606</x>
+     <y>676</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>createDB()</slot>
@@ -1111,5 +1127,6 @@
   <slot>open_fct_comp_3()</slot>
   <slot>open_fct_comp_4()</slot>
   <slot>open_fct_part_2_2()</slot>
+  <slot>open_fct_part2_1()</slot>
  </slots>
 </ui>
