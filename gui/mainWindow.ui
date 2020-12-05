@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>718</width>
-    <height>949</height>
+    <width>710</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+    <normaloff>342px-Olympic_rings_without_rims.svg.png</normaloff>342px-Olympic_rings_without_rims.svg.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="Line" name="line">
@@ -928,8 +928,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>718</width>
-     <height>26</height>
+     <width>710</width>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFiles">
@@ -1136,7 +1136,7 @@
      <y>743</y>
     </hint>
     <hint type="destinationlabel">
-     <x>717</x>
+     <x>725</x>
      <y>759</y>
     </hint>
    </hints>

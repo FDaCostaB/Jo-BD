@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+    <normaloff>342px-Olympic_rings_without_rims.svg.png</normaloff>342px-Olympic_rings_without_rims.svg.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
