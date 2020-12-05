@@ -14,6 +14,9 @@ from actions.action_fct_comp_3 import AppFctComp3
 from actions.action_fct_comp_4 import AppFctComp4
 from actions.action_fct_part2_1 import AppFctPart2_1
 from actions.action_fct_part_2_2 import AppFctPart_2_2
+from actions.action_fct_part_2_2 import AppFctPart_2_2
+from actions.action_fct_part_3_2 import AppFctPart_3_2
+from actions.action_fct_part_3_3 import AppFctPart_3_3
 
 # Classe utilisée pour lancer la fenêtre principale de l'application et définir ses actions
 class AppWindow(QMainWindow):
@@ -34,6 +37,8 @@ class AppWindow(QMainWindow):
     fct_comp_4_dialog = None
     fct_part2_1_dialog = None
     fct_part_2_2_dialog = None
+    fct_part_3_2_dialog = None
+    fct_part_3_3_dialog = None
 
     # Constructeur
     def __init__(self):
@@ -57,6 +62,7 @@ class AppWindow(QMainWindow):
         try:
             # On exécute les requêtes du fichier de création
             db.updateDBfile(self.data, "data/createDB.sql")
+            #db.updateTriggers(self.data, "data/triggers.sql")
 
         except Exception as e:
             # En cas d'erreur, on affiche un message
@@ -178,6 +184,20 @@ class AppWindow(QMainWindow):
         self.fct_part_2_2_dialog = AppFctPart_2_2(self.data)
         self.fct_part_2_2_dialog.show()
 
+    #En cas de clic sur la fonction 2 dans la partie 3
+    def open_fct_part_3_2(self):
+        if self.fct_part_3_2_dialog is not None:
+            self.fct_part_3_2_dialog.close()
+        self.fct_part_3_2_dialog = AppFctPart_3_2(self.data)
+        self.fct_part_3_2_dialog.show()
+
+    #En cas de clic sur la fonction 3 dans la partie 3
+    def open_fct_part_3_3(self):
+        if self.fct_part_3_3_dialog is not None:
+            self.fct_part_3_3_dialog.close()
+        self.fct_part_3_3_dialog = AppFctPart_3_3(self.data)
+        self.fct_part_3_3_dialog.show()
+
 
     ####################################################################################################################
     # Fonctions liées aux évènements (signal/slot/event)
@@ -208,6 +228,10 @@ class AppWindow(QMainWindow):
                 self.fct_part2_1_dialog.close()
         if (self.fct_part_2_2_dialog is not None):
             self.fct_part_2_2_dialog.close()
+        if (self.fct_part_3_2_dialog is not None):
+            self.fct_part_3_2_dialog.close()
+        if (self.fct_part_3_3_dialog is not None):
+            self.fct_part_3_3_dialog.close()
         # On ferme proprement la base de données
         self.data.close()
 

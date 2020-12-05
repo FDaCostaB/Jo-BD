@@ -16,7 +16,7 @@ INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (16, 'Combine', 'individuelle', 'Ski alpin', 'masculin', NULL, '2020-04-04 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (17, 'Combine', 'individuelle', 'Ski alpin', 'feminin', NULL, '2020-04-04 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (18, 'Vol a Ski', 'individuelle', 'Ski de fond', 'masculin', NULL, '2020-04-04 10:49:28');
-INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (19, 'Tremplin 90', 'individuelle', 'Ski de fond', 'masculin', NULL, '2020-04-05 10:49:28');
+INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (19, 'Tremplin 90', 'individuelle', 'Ski de fond', 'masculin', NULL, '2021-04-05 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (20, 'Combine Nordique', 'individuelle', 'Ski de fond', 'masculin', NULL, '2020-04-06 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (21, 'Biathlon', 'individuelle', 'Ski de fond', 'masculin', NULL, '2020-04-06 10:49:28');
 INSERT INTO LesEpreuves (numEp, nomEp, formeEp, nomDi, categorieEp, nbSportifsEp, dateEp) VALUES (22, 'Biathlon', 'par equipe', 'Ski de fond', 'masculin', 3, '2020-06-30 10:49:28');

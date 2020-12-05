@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>710</width>
-    <height>900</height>
+    <width>718</width>
+    <height>949</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -271,8 +271,8 @@
    <widget class="Line" name="line_6">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>830</y>
+      <x>10</x>
+      <y>880</y>
       <width>685</width>
       <height>16</height>
      </rect>
@@ -877,13 +877,58 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>840</y>
+      <width>681</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_14">
+     <item>
+      <spacer name="horizontalSpacer_29">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="text">
+        <string>3.3 Gérer les équipes</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_30">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>710</width>
+     <width>718</width>
      <height>26</height>
     </rect>
    </property>
@@ -1091,7 +1136,7 @@
      <y>743</y>
     </hint>
     <hint type="destinationlabel">
-     <x>725</x>
+     <x>717</x>
      <y>759</y>
     </hint>
    </hints>
@@ -1112,6 +1157,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_fct_part_3_2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>406</x>
+     <y>846</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>576</x>
+     <y>843</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_fct_part_3_3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>888</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>886</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>createDB()</slot>
@@ -1128,5 +1205,7 @@
   <slot>open_fct_comp_4()</slot>
   <slot>open_fct_part_2_2()</slot>
   <slot>open_fct_part2_1()</slot>
+  <slot>open_fct_part_3_2()</slot>
+  <slot>open_fct_part_3_3()</slot>
  </slots>
 </ui>

@@ -46,6 +46,20 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>                           </string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>Fermer</string>
@@ -112,14 +126,14 @@
          <attribute name="horizontalHeaderCascadingSectionResizes">
           <bool>true</bool>
          </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>50</number>
+         </attribute>
          <attribute name="horizontalHeaderDefaultSectionSize">
           <number>130</number>
          </attribute>
          <attribute name="horizontalHeaderHighlightSections">
           <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderMinimumSectionSize">
-          <number>50</number>
          </attribute>
          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
           <bool>true</bool>
@@ -247,11 +261,11 @@
          <property name="columnCount">
           <number>2</number>
          </property>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>200</number>
-         </attribute>
          <attribute name="horizontalHeaderMinimumSectionSize">
           <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>200</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -327,11 +341,11 @@
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
         <widget class="QTableWidget" name="tableInscriptions">
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>200</number>
-         </attribute>
          <attribute name="horizontalHeaderMinimumSectionSize">
           <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>200</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -407,11 +421,11 @@
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
         <widget class="QTableWidget" name="tableResultats">
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>200</number>
-         </attribute>
          <attribute name="horizontalHeaderMinimumSectionSize">
           <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>200</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -497,11 +511,11 @@
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <item>
         <widget class="QTableWidget" name="tableSportifs">
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>110</number>
-         </attribute>
          <attribute name="horizontalHeaderMinimumSectionSize">
           <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>110</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -660,12 +674,28 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>360</x>
-     <y>575</y>
+     <x>639</x>
+     <y>596</y>
     </hint>
     <hint type="destinationlabel">
      <x>323</x>
      <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>tablesData</receiver>
+   <slot>refreshAllTables()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>583</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>579</y>
     </hint>
    </hints>
   </connection>
@@ -674,5 +704,6 @@
   <slot>refreshSpectaclesData()</slot>
   <slot>refreshZonesData()</slot>
   <slot>refreshRepresentationsData()</slot>
+  <slot>refreshAllTables()</slot>
  </slots>
 </ui>

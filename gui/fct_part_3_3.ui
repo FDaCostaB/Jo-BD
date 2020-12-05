@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fct_part_3_3</class>
+ <widget class="QDialog" name="fct_part_3_3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>882</width>
+    <height>146</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sportifs d'un pays et un équipe</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</normaloff>../../../../../../../342px-Olympic_rings_without_rims.svg.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Num équipe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_part_3_3_numEq"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Sportif</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_part_3_3_numSp"/>
+     </item>
+    </layout>
+   </item>
+   <item alignment="Qt::AlignHCenter">
+    <widget class="QCheckBox" name="checkBox_Delete">
+     <property name="text">
+      <string>Retirer un sportif</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Valider</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_part_3_3">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBox_part_3_3_numEq</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>fct_part_3_3</receiver>
+   <slot>initialiserSportifs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_part_3_3</receiver>
+   <slot>insertResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>513</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_Delete</sender>
+   <signal>clicked()</signal>
+   <receiver>fct_part_3_3</receiver>
+   <slot>initialiserSportifs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>354</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>initialiserSportifs()</slot>
+  <slot>insertResult()</slot>
+ </slots>
+</ui>
