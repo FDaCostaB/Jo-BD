@@ -58,9 +58,10 @@ class AppFctPart_3_3(QDialog):
             self.comboBox_part_3_3_numSp.clear()
             self.comboBox_part_3_3_numSp.addItems(sportifs)
 
+    #On ne modifie pas une équipe déjà inscrite dans une épreuve avec un nombre de participants fixé
     def initialiserEquipe(self):
         cursor = self.data.cursor()
-        cursor.execute("SELECT numEq FROM LesEquipes")
+        cursor.execute("SELECT numEq FROM LesEquipes EXCEPT SELECT numIn FROM LesInscriptions JOIN LesEpreuves USING (numEp) WHERE nbSportifsEp NOTNULL")
         equipe = [str(i[0]) for i in cursor.fetchall()]
         self.comboBox_part_3_3_numEq.clear()
         self.comboBox_part_3_3_numEq.addItems(equipe)
