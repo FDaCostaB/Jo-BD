@@ -13,7 +13,7 @@ class AppFctPart_3_3(QDialog):
         self.ui = uic.loadUi("gui/fct_part_3_3.ui", self)
         self.data = data
         self.initialiserEquipe()
-        #self.initialiserInscrits()
+        self.initialiserSportifs()
 
     # Fonction de mise à jour de l'affichage
     @pyqtSlot()
@@ -52,16 +52,18 @@ class AppFctPart_3_3(QDialog):
             self.comboBox_part_3_3_numSp.clear()
             self.comboBox_part_3_3_numSp.addItems(sportifs)
         else :
-            cursor.execute("WITH Country AS (SELECT DISTINCT pays FROM LesSportifs_base WHERE numSp IN (SELECT numSp FROM LesEquipiers WHERE numEq=?))SELECT prenomSp,nomSp FROM LesSportifs_base WHERE pays IN Country EXCEPT SELECT prenomSp,nomSp FROM LesSportifs_base JOIN LesEquipiers USING (numSp) WHERE numEq=1",
-                       [self.ui.comboBox_part_3_3_numEq.currentText()])
+            cursor.execute("WITH Country AS (SELECT DISTINCT pays FROM LesSportifs_base WHERE numSp IN (SELECT numSp FROM LesEquipiers WHERE numEq=?))SELECT prenomSp,nomSp FROM LesSportifs_base WHERE pays IN Country EXCEPT SELECT prenomSp,nomSp FROM LesSportifs_base JOIN LesEquipiers USING (numSp) WHERE numEq=?",
+                           (self.ui.comboBox_part_3_3_numEq.currentText(),
+                            self.ui.comboBox_part_3_3_numEq.currentText() ) )
             sportifs = [str(i[0] +" "+ i[1]) for i in cursor.fetchall()]
             self.comboBox_part_3_3_numSp.clear()
             self.comboBox_part_3_3_numSp.addItems(sportifs)
 
-    #On ne modifie pas une équipe déjà inscrite dans une épreuve avec un nombre de participants fixé
+    #On ne modifie pas une équipe déjà inscrite dans une épreuve avec nb de participants fixé
     def initialiserEquipe(self):
         cursor = self.data.cursor()
-        cursor.execute("SELECT numEq FROM LesEquipes EXCEPT SELECT numIn FROM LesInscriptions JOIN LesEpreuves USING (numEp) WHERE nbSportifsEp NOTNULL")
+        cursor.execute("SELECT numEq FROM LesEquipes EXCEPT SELECT numIn FROM LesInscriptions JOIN LesEpreuves USING (numEp) WHERE nbSportifsEp NOTNULL", )
         equipe = [str(i[0]) for i in cursor.fetchall()]
+        print(equipe)
         self.comboBox_part_3_3_numEq.clear()
         self.comboBox_part_3_3_numEq.addItems(equipe)
