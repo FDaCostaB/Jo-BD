@@ -747,7 +747,7 @@
      <rect>
       <x>12</x>
       <y>690</y>
-      <width>681</width>
+      <width>753</width>
       <height>36</height>
      </rect>
     </property>
@@ -929,7 +929,7 @@
      <x>0</x>
      <y>0</y>
      <width>711</width>
-     <height>26</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFiles">
@@ -1189,6 +1189,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_fct_part_3_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>804</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>796</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>createDB()</slot>
@@ -1207,5 +1223,6 @@
   <slot>open_fct_part2_1()</slot>
   <slot>open_fct_part_3_2()</slot>
   <slot>open_fct_part_3_3()</slot>
+  <slot>open_fct_part_3_1()</slot>
  </slots>
 </ui>

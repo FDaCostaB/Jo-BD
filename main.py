@@ -15,6 +15,7 @@ from actions.action_fct_comp_4 import AppFctComp4
 from actions.action_fct_part2_1 import AppFctPart2_1
 from actions.action_fct_part_2_2 import AppFctPart_2_2
 from actions.action_fct_part_2_2 import AppFctPart_2_2
+from actions.action_fct_part_3_1 import AppFctPart_3_1
 from actions.action_fct_part_3_2 import AppFctPart_3_2
 from actions.action_fct_part_3_3 import AppFctPart_3_3
 
@@ -37,6 +38,7 @@ class AppWindow(QMainWindow):
     fct_comp_4_dialog = None
     fct_part2_1_dialog = None
     fct_part_2_2_dialog = None
+    fct_part_3_1_dialog = None
     fct_part_3_2_dialog = None
     fct_part_3_3_dialog = None
 
@@ -184,6 +186,13 @@ class AppWindow(QMainWindow):
         self.fct_part_2_2_dialog = AppFctPart_2_2(self.data)
         self.fct_part_2_2_dialog.show()
 
+    # En cas de clic sur la fonction 1 dans la partie 3
+    def open_fct_part_3_1(self):
+        if self.fct_part_3_1_dialog is not None:
+            self.fct_part_3_1_dialog.close()
+        self.fct_part_3_1_dialog = AppFctPart_3_1(self.data)
+        self.fct_part_3_1_dialog.show()
+
     #En cas de clic sur la fonction 2 dans la partie 3
     def open_fct_part_3_2(self):
         if self.fct_part_3_2_dialog is not None:
@@ -225,9 +234,11 @@ class AppWindow(QMainWindow):
         if (self.fct_comp_4_dialog is not None):
             self.fct_comp_4_dialog.close()
         if (self.fct_part2_1_dialog is not None):
-                self.fct_part2_1_dialog.close()
+            self.fct_part2_1_dialog.close()
         if (self.fct_part_2_2_dialog is not None):
             self.fct_part_2_2_dialog.close()
+        if (self.fct_part_3_1_dialog is not None):
+            self.fct_part_3_1_dialog.close()
         if (self.fct_part_3_2_dialog is not None):
             self.fct_part_3_2_dialog.close()
         if (self.fct_part_3_3_dialog is not None):
