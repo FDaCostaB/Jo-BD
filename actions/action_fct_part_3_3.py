@@ -64,6 +64,5 @@ class AppFctPart_3_3(QDialog):
         cursor = self.data.cursor()
         cursor.execute("SELECT numEq FROM LesEquipes EXCEPT SELECT numIn FROM LesInscriptions JOIN LesEpreuves USING (numEp) WHERE nbSportifsEp NOTNULL", )
         equipe = [str(i[0]) for i in cursor.fetchall()]
-        print(equipe)
         self.comboBox_part_3_3_numEq.clear()
         self.comboBox_part_3_3_numEq.addItems(equipe)
