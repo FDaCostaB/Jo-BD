@@ -1,4 +1,3 @@
-
 CREATE TRIGGER Categorie_Participation
     BEFORE INSERT
         ON LesEquipiers

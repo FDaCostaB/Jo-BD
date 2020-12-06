@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>709</width>
+    <width>711</width>
     <height>950</height>
    </rect>
   </property>
@@ -747,7 +747,7 @@
      <rect>
       <x>12</x>
       <y>690</y>
-      <width>753</width>
+      <width>681</width>
       <height>36</height>
      </rect>
     </property>
@@ -903,7 +903,7 @@
      <item>
       <widget class="QPushButton" name="pushButton_16">
        <property name="text">
-        <string>3.3 Gérer les équipes</string>
+        <string>3.3 Ajout ET surpression de sportifs des équipes</string>
        </property>
       </widget>
      </item>
@@ -928,7 +928,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>709</width>
+     <width>711</width>
      <height>26</height>
     </rect>
    </property>
