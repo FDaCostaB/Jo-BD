@@ -1,6 +1,6 @@
 # Jo-BD (12/2020)
 
-A application to interact with Database based on a Olympics competitions scenario.
+An application to interact with Database based on a Olympics competitions scenario.
 Windows designed on PyQtDesigner.
 
 Libraries needed : sys, sqlite3, utils, PyQt5
